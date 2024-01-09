@@ -6,6 +6,7 @@ expo => instalador: npm install @expo/vector-icons
 react-native+> npm install react-native-vector-icons
 */
 import { FontAwesome, Feather, Entypo, AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function App() {
   return (
@@ -36,6 +37,8 @@ export default function App() {
         />
         <Text style={styles.btnText}> Acessar canal </Text>
       </TouchableOpacity>
+
+      <Ionicons name='open' size={54} color={'#DC2A35'}/>
 
     </View>
   );
