@@ -1,12 +1,42 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+/* 
+bibliotecas icons
+expo => instalador: npm install @expo/vector-icons
+react-native+> npm install react-native-vector-icons
+*/
+import { FontAwesome, Feather, Entypo, AntDesign } from '@expo/vector-icons';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Ola mundo, icons para aplicativos</Text>
+      <AntDesign
+        name={"home"}
+        size={54}
+        color={'#5A9BDC'}
+      />
+
+      <Feather
+        name={"user"}
+        size={54}
+        color={"#A17ADB"}
+      />
+       <Entypo
+          name={"youtube"}
+          size={54}
+          color={'#FF0000'}
+        />
+
+      <TouchableOpacity style={styles.areaYoutube}>
+        <FontAwesome
+          name={"youtube"}
+          size={54}
+          color={'#FFF'}
+        />
+        <Text style={styles.btnText}> Acessar canal </Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -18,4 +48,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  areaYoutube: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems:'center',
+    padding: 5,
+    backgroundColor: '#FF0000',
+    borderRadius: 15
+  },
+  btnText: {
+    fontSize:20,
+    paddingLeft: 10,
+    color: '#FFF'
+  }
 });
